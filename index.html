@@ -297,8 +297,17 @@
   <footer>
     <div>
       <div class="contact-label">contact</div>
-      <a class="contact-email" href="mailto:krisztian@konczert.com">krisztian@konczert.com</a>
+      <a class="contact-email" id="email-link" href="#">—</a>
     </div>
+    <script>
+      (function() {
+        var u = 'krisztian';
+        var d = 'konczert.com';
+        var el = document.getElementById('email-link');
+        el.href = 'mailto:' + u + '@' + d;
+        el.textContent = u + '@' + d;
+      })();
+    </script>
     <div class="copy">© 2026</div>
   </footer>
 
